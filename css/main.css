@@ -7,7 +7,7 @@
 }	
 root{font-size:					16px;}
 :root {
-	--main-header-color: #85A7FF;
+	--main-header-color: #bb3838;
 }
 /*Style headings*/	
 /* h1{	font-family:				'Galindo', cursive; 	font-size:	4.5em} */
@@ -27,7 +27,7 @@ body
 	
 	font-family: 				'Roboto';
 	font-size:					1em;
-	background:					#526DB3;
+	background:					#d34747;
 	position:					relative;
 }	
 

@@ -5,7 +5,7 @@
 	padding:					0;
 	color:						#FFFFFF;
 }	
-root{font-size:					12px;}
+root{font-size:					16px;}
 :root {
 	--main-header-color: #bb3838;
 }
@@ -168,7 +168,7 @@ div.parallax
 /*SEPARATOR*/
 .SEPARATOR
 {
-	height:						4.875em;
+	height:						4.575em;
 	background-color:			#1D1E29;
 	width:						100%;
 }

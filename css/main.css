@@ -5,7 +5,7 @@
 	padding:					0;
 	color:						#FFFFFF;
 }	
-root{font-size:					16px;}
+root{font-size:					12px;}
 :root {
 	--main-header-color: #bb3838;
 }
@@ -137,7 +137,7 @@ body
 div.parallax
 {
 	display:					block;
-	height:						9.869em;
+	height:						19.869em;
 	font-size:					2em;
 	position:					relative;
 	overflow:					hidden;

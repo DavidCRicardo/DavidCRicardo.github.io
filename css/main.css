@@ -168,7 +168,7 @@ div.parallax
 /*SEPARATOR*/
 .SEPARATOR
 {
-	height:						4.575em;
+	height:						4.575em; /*4.875em*/
 	background-color:			#1D1E29;
 	width:						100%;
 }
@@ -177,7 +177,7 @@ div.parallax
 	position:					relative;
 	top:						0.4375em;
 	width:						100%;
-	height:						4em;
+	height:						2em; /*4 */
 	/* outline:					2px solid #85A7FF; */
 }
 .SEPARATOR div h3

@@ -9,11 +9,35 @@ class PortfolioProject {
     }
 
     SerializeAsMain() {
-        
+        return "<a href='" + this.urlref + "' onclick='return clickableProject(this)' target='_blank'> \
+        <div class='pBorder'> \
+            <article style='background-image:url(" + this.imgref + ")'> \
+                <div class='description'> \
+                    <h4>" + this.title + "</h4> \
+                    <div><p>" + this.description + "</p></div> \
+                    <p class='team'>" + this.type + "</p> \
+                </div> \
+                <div style='background-image:url(" + this.imghoverref + ")' class='hov'></div> \
+            </article> \
+        </div> \
+    </a>";
     }
 
     SerializeAsRelease() {
-        
+        return `<a href=`+ this.urlref + `onclick="return clickableProject(this)" target="_blank">
+        <div class="pBorder">
+            <article style="background-image:url(` + this.imgref + `)">
+                <div class="description">
+                    <h4>` + this.title + `</h4>
+                    <div>
+                        <p>` + this.description + `</p>
+                    </div>
+                    <p class="team">` + this.type + `</p>
+                </div>
+                <div style="background-image:url(` + this.imghoverref + `)" class="hov"></div>
+            </article>
+        </div>
+    </a>`;
     }
 };
 

@@ -49,7 +49,15 @@ var mainProjects = [
 
 var releasedProjects = [
     new PortfolioProject(
-        
+        "PingPong",
+        "https://youtu.be/iodkJTezckY",
+        "img/projects/pingpong.png",
+        "img/projects/pingpong.png",
+        `It is the first game-project done for academic purposes.
+        Game for 2 players, WASD and arrows being the controls.
+        Developed using C# on Visual Studio with a the focus in start creating a game.
+        I'm the only developer.`,
+        "Personal Project"
     )
 ];
 

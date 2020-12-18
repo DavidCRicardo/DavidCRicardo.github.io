@@ -10,7 +10,8 @@
 
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/responsive.css">
-
+        
+        <meta name="keywords" content="David, Ricardo, Portfolio">
         <meta name="author" content="David Ricardo">
     </head>
     
@@ -18,7 +19,15 @@
     <!--MENU-->
     <nav class="MENU" id="top">
         <div class="lines"></div>
-
+        <button onclick="toggleMenu()" class="menuBtn">Menu</button>
+        <div id="menList" class="list">
+            <a href="#home">
+                <img class="menImg" src="img/planets/Terran.png" alt="home button or back to top" />
+                <div class="menTxt"><h3>Home</h3></div>
+            </a>
+            <a onclick="toggleMenu()" href="#portfolio"><div><h3>Portfolio</h3></div></a>
+            <a onclick="toggleMenu()" href="#resume"><div><h3>Resume</h3></div></a>
+            <a onclick="toggleMenu()" href="#contact"><div><h3>Contact</h3></div></a>
         </div>
     </nav>
     <div id="home"></div>
@@ -27,6 +36,7 @@
     <div id="title">
         <hgroup>
             <h1>David Ricardo</h1>
+            <h2>Indie Developer</h2>
         </hgroup>
     </div>  
 

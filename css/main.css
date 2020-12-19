@@ -7,12 +7,12 @@
 }	
 root{font-size:					16px;}
 :root {
-	--main-header-color: #bb3838;
+	--main-header-color: #3d1d1d;
 }
 /*Style headings*/	
 /* h1{	font-family:				'Galindo', cursive; 	font-size:	4.5em} */
 h1{	font-family:				'Roboto'; 	font-size:	4.5em}
-h2{	font-family:				'Roboto'; 	font-style: italic; 	font-weight: normal; 	font-size:	2em}
+h2{	font-family:				'Roboto-regular'; 	font-style: italic; 	font-weight: normal; 	font-size:	2em}
 h3{	font-family:				'Roboto'; 	font-size:	3em}
 h4{	font-family:				'Roboto'; 	font-size:	1.875em}
 

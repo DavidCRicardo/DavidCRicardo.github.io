@@ -71,7 +71,7 @@ releasedProjects=[
         "img/projects/rpg2D_Menu2.png",
         `Developed using HTML, CSS and Javascript.
         I'm the only developer.`,
-        "Personal Project (2017)"
+        "Personal Project"
     ),
 
     new PortfolioProject(
@@ -81,7 +81,7 @@ releasedProjects=[
         "img/projects/BreakOut_Menu.png",
         `Developed using C# on Visual Studio.
         I'm the only developer.`,
-        "Personal Project (2017)"
+        "Personal Project"
     ),
 
     new PortfolioProject(
@@ -91,7 +91,7 @@ releasedProjects=[
         "img/projects/Ping_Pong_Menu.png",
         `Developed using C# on Visual Studio.
         I'm the only developer.`,
-        "Personal Project (2017)"
+        "Personal Project"
     )    
 ],
 

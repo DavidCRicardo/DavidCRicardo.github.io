@@ -41,25 +41,50 @@ class PortfolioProject {
     }
 };
 
-var mainProjects = [
+var mainProjects=[
     new PortfolioProject(
-
+        "TalesOfShadows",
+        "https://youtu.be/_FWghbuVxX8",
+        "img/projects/TalesOfShadows_Menu.png",
+        "img/projects/TalesOfShadows_Menu.png",
+        `Developed using C++ and Blueprints with Unreal Engine.
+        I'm the only developer.`,
+        "Personal Project"
+    ),
+    
+    new PortfolioProject(
+        "EscapeLab",
+        "https://youtu.be/0mXcU1xA88U",
+        "img/projects/escapelab_gameplay.png",
+        "img/projects/escapeLab_Menu.png",
+        `Developed using C# with Unity.
+        I'm the only developer.`,
+        "Personal Project"
     )
-];
+],
 
-var releasedProjects = [
+releasedProjects=[
     new PortfolioProject(
         "PingPong",
         "https://youtu.be/iodkJTezckY",
         "img/projects/pingpong.png",
         "img/projects/pingpong.png",
-        `It is the first game-project done for academic purposes.
-        Game for 2 players, WASD and arrows being the controls.
-        Developed using C# on Visual Studio with a the focus in start creating a game.
+        `Developed using C# on Visual Studio.
+        I'm the only developer.`,
+        "Personal Project"
+    ),
+
+    new PortfolioProject(
+        "BreakOut",
+        "https://youtu.be/W5P5F5Ryh-8",
+        "img/projects/breakout.png",
+        "img/projects/breakout.png",
+        `Developed using C# on Visual Studio.
         I'm the only developer.`,
         "Personal Project"
     )
-];
+
+],
 
 var otherProjects = [
     new PortfolioProject(

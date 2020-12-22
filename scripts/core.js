@@ -65,11 +65,11 @@ var mainProjects=[
 
 releasedProjects=[
     new PortfolioProject(
-        "PingPong",
-        "https://youtu.be/iodkJTezckY",
-        "img/projects/pingpong.png",
-        "img/projects/pingpong.png",
-        `Developed using C# on Visual Studio.
+        "RPG 2D",
+        "https://youtu.be/TdcC63ItCzk",
+        "img/projects/breakout.png",
+        "img/projects/breakout.png",
+        `Developed using HTML, CSS and Javascript.
         I'm the only developer.`,
         "Personal Project"
     ),
@@ -82,8 +82,17 @@ releasedProjects=[
         `Developed using C# on Visual Studio.
         I'm the only developer.`,
         "Personal Project"
-    )
+    ),
 
+    new PortfolioProject(
+        "PingPong",
+        "https://youtu.be/iodkJTezckY",
+        "img/projects/pingpong.png",
+        "img/projects/pingpong.png",
+        `Developed using C# on Visual Studio.
+        I'm the only developer.`,
+        "Personal Project"
+    )  
 ],
 
 var otherProjects = [

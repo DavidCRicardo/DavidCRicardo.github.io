@@ -67,8 +67,8 @@ releasedProjects=[
     new PortfolioProject(
         "RPG 2D",
         "https://youtu.be/TdcC63ItCzk",
-        "img/projects/breakout.png",
-        "img/projects/breakout.png",
+        "img/projects/rpg_2d_demo.png",
+        "img/projects/rpg2D_Menu2.png",
         `Developed using HTML, CSS and Javascript.
         I'm the only developer.`,
         "Personal Project"

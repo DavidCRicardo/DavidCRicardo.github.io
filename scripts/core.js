@@ -78,7 +78,7 @@ releasedProjects=[
         "BreakOut",
         "https://youtu.be/W5P5F5Ryh-8",
         "img/projects/breakout.png",
-        "img/projects/breakout.png",
+        "img/projects/BreakOut_Menu.png",
         `Developed using C# on Visual Studio.
         I'm the only developer.`,
         "Personal Project"
@@ -88,11 +88,11 @@ releasedProjects=[
         "PingPong",
         "https://youtu.be/iodkJTezckY",
         "img/projects/pingpong.png",
-        "img/projects/pingpong.png",
+        "img/projects/Ping_Pong_Menu.png",
         `Developed using C# on Visual Studio.
         I'm the only developer.`,
         "Personal Project"
-    )  
+    )    
 ],
 
 var otherProjects = [

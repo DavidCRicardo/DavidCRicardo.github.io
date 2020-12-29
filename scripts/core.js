@@ -45,8 +45,8 @@ var mainProjects=[
     new PortfolioProject(
         "Asteroids_Clone",
         "https://youtu.be/aMdXH05n0AY",
-        "img/projects/asteroids_clone.png",
-        "img/projects/asteroids_clone.png",
+        "img/projects/Asteroids_Clone.png",
+        "img/projects/Asteroids_Clone.png",
         `Developed using C++ with Unreal Engine.
         I'm the only developer.`,
         "Personal Project"
@@ -119,8 +119,8 @@ var otherProjects = [
     new PortfolioProject(
         "Launcher Prototype",
         "https://youtu.be/iodkJTezckY",
-        "img/projects/pingpong_1.png",
-        "img/projects/Ping_Pong_Menu.png",
+        "img/projects/launcher-demo1.png",
+        "img/projects/launcher-demo2.png",
         `Developed using C# on Visual Studio.
         I'm the only developer.`,
         "Personal Project"

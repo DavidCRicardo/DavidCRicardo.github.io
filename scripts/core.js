@@ -108,7 +108,7 @@ releasedProjects=[
 var otherProjects = [
     new PortfolioProject(
         "Two-Factor Authentication",
-        "#",
+        "https://github.com/DavidCRicardo/TwoFactor-Authentication",
         "img/projects/PG1.png",
         "img/projects/PG2.png",
         `Developed using C# and Xamarin on Visual Studio.
@@ -118,7 +118,7 @@ var otherProjects = [
 
     new PortfolioProject(
         "Launcher Prototype",
-        "#",
+        "https://github.com/DavidCRicardo/Launcher_prototype",
         "img/projects/launcher-demo1.png",
         "img/projects/launcher-demo2.png",
         `Developed using C# on Visual Studio.

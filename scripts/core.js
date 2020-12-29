@@ -43,6 +43,16 @@ class PortfolioProject {
 
 var mainProjects=[
     new PortfolioProject(
+        "Asteroids_Clone",
+        "https://youtu.be/aMdXH05n0AY",
+        "img/projects/asteroids_clone.png",
+        "img/projects/asteroids_clone.png",
+        `Developed using C++ with Unreal Engine.
+        I'm the only developer.`,
+        "Personal Project"
+    ),
+
+    new PortfolioProject(
         "TalesOfShadows",
         "https://youtu.be/_FWghbuVxX8",
         "img/projects/TalesOfShadows_Menu.png",

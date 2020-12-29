@@ -107,8 +107,24 @@ releasedProjects=[
 
 var otherProjects = [
     new PortfolioProject(
-        
-    )
+        "Two-Factor Authentication",
+        "https://youtu.be/W5P5F5Ryh-8",
+        "img/projects/breakout_1.png",
+        "img/projects/BreakOut_Menu.png",
+        `Developed using C# and Xamarin on Visual Studio.
+        I'm the only developer.`,
+        "Personal Project"
+    ),
+
+    new PortfolioProject(
+        "Launcher Prototype",
+        "https://youtu.be/iodkJTezckY",
+        "img/projects/pingpong_1.png",
+        "img/projects/Ping_Pong_Menu.png",
+        `Developed using C# on Visual Studio.
+        I'm the only developer.`,
+        "Personal Project"
+    ) 
 ];
 
 

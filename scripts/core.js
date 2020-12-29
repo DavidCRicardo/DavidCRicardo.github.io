@@ -43,6 +43,16 @@ class PortfolioProject {
 
 var mainProjects=[
     new PortfolioProject(
+        "Untitled Samurai Game",
+        "https://www.youtube.com/watch?v=yohKr7riO9c&list=PL_m2-cQDYqom1xn83QP0jhWOc7zw_Iv2B&index=8",
+        "img/projects/devlog#05.png",
+        "img/projects/devlog#05.png",
+        `Developed using C++ and Blueprints with Unreal Engine.
+        I'm the only developer.`,
+        "Personal Project"
+    ),
+    
+    new PortfolioProject(
         "Asteroids_Clone",
         "https://youtu.be/aMdXH05n0AY",
         "img/projects/Asteroids_Clone.png",

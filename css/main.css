@@ -83,7 +83,7 @@ body
 	position:					relative;
 	top:						50%;
 }
-.MENU div a img		
+/*.MENU div a img		
 {	
 	width:						3.9em;
 	margin-top:					-50%;
@@ -91,17 +91,17 @@ body
     -webkit-filter:             grayscale(100%) brightness(300%);
     filter:                     greyscale(100%) brightness(300%);
     transition:                 filter 0.3s, -webkit-filter 0.3s, -moz-filter 0.3s;
-}
+}*/
 .MENU div a .menTxt
 {
     display:none;
 }
-.MENU div a:hover img		
+/*.MENU div a:hover img		
 {	
     -moz-filter:                grayscale(0%) brightness(100%);
     -webkit-filter:             grayscale(0%) brightness(100%);
     filter:                     greyscale(0%) brightness(100%);
-}
+}*/
 .MENU div a div		
 {		
 	font-size: 0.9em;

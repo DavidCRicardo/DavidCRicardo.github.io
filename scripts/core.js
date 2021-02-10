@@ -24,7 +24,7 @@ class PortfolioProject {
     }
 
     SerializeAsRelease() {
-        return `<a href=`+ this.urlref + `onclick="return clickableProject(this)" target="_blank">
+        return `<a href=` + this.urlref + `onclick="return clickableProject(this)" target="_blank">
         <div class="pBorder">
             <article style="background-image:url(` + this.imgref + `)">
                 <div class="description">
@@ -41,101 +41,101 @@ class PortfolioProject {
     }
 };
 
-var mainProjects=[
-    new PortfolioProject(
-        "Untitled Samurai Game",
-        "https://www.youtube.com/watch?v=yohKr7riO9c&list=PL_m2-cQDYqom1xn83QP0jhWOc7zw_Iv2B&index=8",
-        "img/projects/devlog.png",
-        "img/projects/devlog2.png",
-        `Developed using C++ and Blueprints with Unreal Engine.
+var mainProjects = [
+        new PortfolioProject(
+            "Kan Samurai Game",
+            "https://www.kansamurai.com",
+            "img/projects/devlog.png",
+            "img/projects/devlog2.png",
+            `Developed using C++ and Blueprints with Unreal Engine.
         I'm the only developer.`,
-        "Personal Project"
-    ),
+            "Personal Project"
+        ),
 
-    new PortfolioProject(
-        "Asteroids_Clone",
-        "https://youtu.be/aMdXH05n0AY",
-        "img/projects/Asteroids_Clone.png",
-        "img/projects/Asteroids_Clone.png",
-        `Developed using C++ with Unreal Engine.
+        new PortfolioProject(
+            "Asteroids_Clone",
+            "https://youtu.be/aMdXH05n0AY",
+            "img/projects/Asteroids_Clone.png",
+            "img/projects/Asteroids_Clone.png",
+            `Developed using C++ with Unreal Engine.
         I'm the only developer.`,
-        "Personal Project"
-    ),
+            "Personal Project"
+        ),
 
-    new PortfolioProject(
-        "TalesOfShadows",
-        "https://youtu.be/_FWghbuVxX8",
-        "img/projects/TalesOfShadows_Menu.png",
-        "img/projects/TalesOfShadows_Menu.png",
-        `Developed using C++ and Blueprints with Unreal Engine.
+        new PortfolioProject(
+            "TalesOfShadows",
+            "https://youtu.be/_FWghbuVxX8",
+            "img/projects/TalesOfShadows_Menu.png",
+            "img/projects/TalesOfShadows_Menu.png",
+            `Developed using C++ and Blueprints with Unreal Engine.
         I'm the only developer.`,
-        "Personal Project"
-    ),
-    
-    new PortfolioProject(
-        "EscapeLab",
-        "https://youtu.be/0mXcU1xA88U",
-        "img/projects/escapelab_gameplay.png",
-        "img/projects/escapeLab_Menu.png",
-        `Developed using C# with Unity.
-        I'm the only developer.`,
-        "Personal Project"
-    )
-],
+            "Personal Project"
+        ),
 
-releasedProjects=[
-    new PortfolioProject(
-        "RPG 2D",
-        "https://youtu.be/TdcC63ItCzk",
-        "img/projects/rpg_2d_demo.png",
-        "img/projects/rpg2D_Menu2.png",
-        `Developed using HTML, CSS and Javascript.
+        new PortfolioProject(
+            "EscapeLab",
+            "https://youtu.be/0mXcU1xA88U",
+            "img/projects/escapelab_gameplay.png",
+            "img/projects/escapeLab_Menu.png",
+            `Developed using C# with Unity.
         I'm the only developer.`,
-        "Personal Project"
-    ),
+            "Personal Project"
+        )
+    ],
 
-    new PortfolioProject(
-        "BreakOut",
-        "https://youtu.be/W5P5F5Ryh-8",
-        "img/projects/breakout_1.png",
-        "img/projects/BreakOut_Menu.png",
-        `Developed using C# on Visual Studio.
+    releasedProjects = [
+        new PortfolioProject(
+            "RPG 2D",
+            "https://youtu.be/TdcC63ItCzk",
+            "img/projects/rpg_2d_demo.png",
+            "img/projects/rpg2D_Menu2.png",
+            `Developed using HTML, CSS and Javascript.
         I'm the only developer.`,
-        "Personal Project"
-    ),
+            "Personal Project"
+        ),
 
-    new PortfolioProject(
-        "PingPong",
-        "https://youtu.be/iodkJTezckY",
-        "img/projects/pingpong_1.png",
-        "img/projects/Ping_Pong_Menu.png",
-        `Developed using C# on Visual Studio.
+        new PortfolioProject(
+            "BreakOut",
+            "https://youtu.be/W5P5F5Ryh-8",
+            "img/projects/breakout_1.png",
+            "img/projects/BreakOut_Menu.png",
+            `Developed using C# on Visual Studio.
         I'm the only developer.`,
-        "Personal Project"
-    )   
-],
+            "Personal Project"
+        ),
 
-var otherProjects = [
-    new PortfolioProject(
-        "Two-Factor Authentication",
-        "https://github.com/DavidCRicardo/TwoFactor-Authentication",
-        "img/projects/PG1.png",
-        "img/projects/PG2.png",
-        `Developed using C# and Xamarin on Visual Studio.
+        new PortfolioProject(
+            "PingPong",
+            "https://youtu.be/iodkJTezckY",
+            "img/projects/pingpong_1.png",
+            "img/projects/Ping_Pong_Menu.png",
+            `Developed using C# on Visual Studio.
         I'm the only developer.`,
-        "Personal Project"
-    ),
+            "Personal Project"
+        )
+    ],
 
-    new PortfolioProject(
-        "Launcher Prototype",
-        "https://github.com/DavidCRicardo/Launcher_prototype",
-        "img/projects/launcher-demo1.png",
-        "img/projects/launcher-demo2.png",
-        `Developed using C# on Visual Studio.
+    var otherProjects = [
+        new PortfolioProject(
+            "Two-Factor Authentication",
+            "https://github.com/DavidCRicardo/TwoFactor-Authentication",
+            "img/projects/PG1.png",
+            "img/projects/PG2.png",
+            `Developed using C# and Xamarin on Visual Studio.
         I'm the only developer.`,
-        "Personal Project"
-    ) 
-];
+            "Personal Project"
+        ),
+
+        new PortfolioProject(
+            "Launcher Prototype",
+            "https://github.com/DavidCRicardo/Launcher_prototype",
+            "img/projects/launcher-demo1.png",
+            "img/projects/launcher-demo2.png",
+            `Developed using C# on Visual Studio.
+        I'm the only developer.`,
+            "Personal Project"
+        )
+    ];
 
 
 function insertMainProjects() {

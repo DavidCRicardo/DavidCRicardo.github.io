@@ -56,7 +56,7 @@ var mainProjects = [
             "Asteroids_Clone",
             "https://youtu.be/aMdXH05n0AY",
             "img/projects/Asteroids_Clone.png",
-            "img/projects/Asteroids_Clone.png",
+            "img/projects/Asteroids_Clone_2.png",
             `Developed using C++ with Unreal Engine.
         I'm the only developer.`,
             "Personal Project"
@@ -65,10 +65,10 @@ var mainProjects = [
         new PortfolioProject(
             "TalesOfShadows",
             "https://youtu.be/_FWghbuVxX8",
-            "img/projects/TalesOfShadows_Menu.png",
-            "img/projects/TalesOfShadows_Menu.png",
+            "img/projects/TalesOfShadows.png",
+            "img/projects/TalesOfShadows_2.png",
             `Developed using C++ and Blueprints with Unreal Engine.
-        I'm the only developer.`,
+            I'm the only developer.`,
             "Personal Project"
         ),
 
@@ -78,7 +78,7 @@ var mainProjects = [
             "img/projects/escapelab_gameplay.png",
             "img/projects/escapeLab_Menu.png",
             `Developed using C# with Unity.
-        I'm the only developer.`,
+            I'm the only developer.`,
             "Personal Project"
         )
     ],
@@ -101,7 +101,7 @@ var mainProjects = [
             "img/projects/BreakOut_Menu.png",
             `Developed using C# on Visual Studio.
         I'm the only developer.`,
-            "Personal Project"
+            "Academic Project"
         ),
 
         new PortfolioProject(
@@ -122,8 +122,8 @@ var mainProjects = [
             "img/projects/PG1.png",
             "img/projects/PG2.png",
             `Developed using C# and Xamarin on Visual Studio.
-        I'm the only developer.`,
-            "Personal Project"
+            I'm the only developer.`,
+            "Academic Project"
         ),
 
         new PortfolioProject(

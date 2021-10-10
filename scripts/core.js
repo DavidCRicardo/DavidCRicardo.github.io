@@ -43,6 +43,16 @@ class PortfolioProject {
 
 var mainProjects = [
         new PortfolioProject(
+            "Friendly Lords",
+            "https://www.nexusmods.com/mountandblade2bannerlord/mods/3230",
+            "img/projects/FriendlyLords.jpeg",
+            "img/projects/FriendlyLords.jpeg2",
+            `Developed using C# with Visual Studio. 
+        Bannerlord Mod.`,
+            "Academic Project"
+        ),
+
+        new PortfolioProject(
             "Kan Samurai Game",
             "https://www.kansamurai.com",
             "img/projects/devlog.png",

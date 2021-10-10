@@ -46,7 +46,7 @@ var mainProjects = [
             "Friendly Lords",
             "https://www.nexusmods.com/mountandblade2bannerlord/mods/3230",
             "img/projects/FriendlyLords.jpeg",
-            "img/projects/FriendlyLords.jpeg2",
+            "img/projects/FriendlyLords2.jpeg",
             `Developed using C# with Visual Studio. 
         Bannerlord Mod.`,
             "Academic Project"

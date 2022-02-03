@@ -54,7 +54,7 @@ var mainProjects = [
 
         new PortfolioProject(
             "Kan Samurai Game",
-            "https://www.kansamurai.com",
+            "https://david-ricardo.itch.io/kansamurai",
             "img/projects/devlog.png",
             "img/projects/devlog2.png",
             `Developed using C++ and Blueprints with Unreal Engine.
@@ -64,7 +64,7 @@ var mainProjects = [
 
         new PortfolioProject(
             "Asteroids_Clone",
-            "https://youtu.be/aMdXH05n0AY",
+            "https://david-ricardo.itch.io/asteroids-clone",
             "img/projects/Asteroids_Clone.png",
             "img/projects/Asteroids_Clone_2.png",
             `Developed using C++ with Unreal Engine.
@@ -74,7 +74,7 @@ var mainProjects = [
 
         new PortfolioProject(
             "TalesOfShadows",
-            "https://youtu.be/_FWghbuVxX8",
+            "https://david-ricardo.itch.io/tales-of-shadows",
             "img/projects/TalesOfShadows.png",
             "img/projects/TalesOfShadows_2.png",
             `Developed using C++ and Blueprints with Unreal Engine.
@@ -84,7 +84,7 @@ var mainProjects = [
 
         new PortfolioProject(
             "EscapeLab",
-            "https://youtu.be/0mXcU1xA88U",
+            "https://david-ricardo.itch.io/escapelab",
             "img/projects/escapelab_gameplay.png",
             "img/projects/escapeLab_Menu.png",
             `Developed using C# with Unity.

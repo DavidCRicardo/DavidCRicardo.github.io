@@ -60,15 +60,6 @@ Bannerlord Mod.`,
         "Academic Project (2021)"
     ),
     new PortfolioProject(
-        "Asteroids_Clone",
-        "https://david-ricardo.itch.io/asteroids-clone",
-        "img/projects/Asteroids_Clone.png",
-        "img/projects/Asteroids_Clone_2.png",
-        `Developed using C++ with Unreal Engine.
-         I'm the only developer.`,
-        "Personal Project (2019)"
-    ),
-    new PortfolioProject(
         "Two-Factor Authentication",
         "https://github.com/DavidCRicardo/TwoFactor-Authentication",
         "img/projects/PG1.png",
@@ -92,6 +83,15 @@ otherProjects = [
         `Developed using C++ and Blueprints with Unreal Engine.
         I'm the only developer.`,
         "Personal Project (2021)"
+    ),
+    new PortfolioProject(
+        "Asteroids_Clone",
+        "https://david-ricardo.itch.io/asteroids-clone",
+        "img/projects/Asteroids_Clone.png",
+        "img/projects/Asteroids_Clone_2.png",
+        `Developed using C++ with Unreal Engine.
+         I'm the only developer.`,
+        "Personal Project (2019)"
     ),
     new PortfolioProject(
         "TalesOfShadows",

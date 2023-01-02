@@ -43,6 +43,14 @@ class PortfolioProject {
 
 var mainProjects = [
     new PortfolioProject(
+        "Raven Landscape",
+        "https://david-ricardo.itch.io/raven-landscape",
+        "img/projects/RL_thumbnail.png",
+        "img/projects/RL_thumbnail2.png",
+        `Developed using BP using UnrealEngine.`,
+        "Personal Project"
+    ),
+    new PortfolioProject(
         "InventorySystemCPP",
         "https://youtu.be/oyq-Yn8kdJI",
         "img/projects/IS_thumbnail.png",

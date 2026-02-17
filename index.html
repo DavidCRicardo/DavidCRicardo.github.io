@@ -22,128 +22,140 @@
 </head>
 
 <body>
-<!--MENU-->
-<nav class="MENU" id="top">
-    <div class="lines"></div>
-    <button onclick="toggleMenu()" class="menuBtn">Menu</button>
-    <div id="menList" class="list">
-        <a href="#home">
-            <img class="menImg" src="img/others/DR_logo3.png" alt="home button or back to top" />
-            <div class="menTxt">
-                <h3>Home</h3>
-            </div>
-        </a>
-        <a onclick="toggleMenu()" href="#portfolio">
+    <!--MENU-->
+    <nav class="MENU" id="top">
+        <div class="lines"></div>
+        <button onclick="toggleMenu()" class="menuBtn">Menu</button>
+        <div id="menList" class="list">
+            <a href="#home">
+                <img class="menImg" src="img/others/DR_logo3.png" alt="home button or back to top" />
+                <div class="menTxt">
+                    <h3>Home</h3>
+                </div>
+            </a>
+            <a onclick="toggleMenu()" href="#portfolio">
+                <div>
+                    <h3>Portfolio</h3>
+                </div>
+            </a>
+            <a onclick="toggleMenu()" href="#resume">
+                <div>
+                    <h3>Resume</h3>
+                </div>
+            </a>
+            <a onclick="toggleMenu()" href="#contact">
+                <div>
+                    <h3>Contact</h3>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <div id="home"></div>
+
+    <!--HOME-->
+    <div id="title">
+        <hgroup>
+            <h1>David Ricardo</h1>
+            <h2>Aspiring Game Developer</h2>
+        </hgroup>
+    </div>
+    <div class="parallax" style="height: 318.233px;">
+        <img src="img/projects/header.png" alt="Screenshot of Kan Samurai Game" style="transform: translateY(-5.3675px); bottom: -50%; left: 0px; width: 100%; position: absolute;">
+    </div>
+
+    <div id="releasedProjects">
+        <div class="SEPARATOR">
             <div>
-                <h3>Portfolio</h3>
+                <h3>Released Games</h3>
             </div>
-        </a>
-        <a onclick="toggleMenu()" href="#resume">
+        </div>
+        <section id="releasedProjectsSection"> </section>
+    </div>
+
+    <div id="portfolio">
+        <div class="SEPARATOR">
+            <div>
+                <h3>Featured Projects</h3>
+            </div>
+        </div>
+        <section id="portfolioProjects"> </section>
+    </div>
+
+
+
+    <div id="otherProjects" class="smallProjects">
+        <div class="SEPARATOR">
+            <div>
+                <h3>Other Projects</h3>
+            </div>
+        </div>
+        <section id="otherProjectsSection"></section>
+    </div>
+
+    <div id="resume">
+        <div class="SEPARATOR">
             <div>
                 <h3>Resume</h3>
             </div>
-        </a>
-        <a onclick="toggleMenu()" href="#contact">
+        </div>
+
+        <section>
+            <aside id="bio">
+                <div id="pdf">
+                    <a href="/img/portfolio/DavidRicardoCV.pdf" target="_blank" id="pdfContainer">
+                        <article id="pdfBg" style="background-image:url(img/portfolio/portfolio_overview.jpg)">
+                            <div class="description">
+                                <h4>PDF Resume</h4>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </aside>
+        </section>
+    </div>
+
+    <div id="contact">
+        <div class="SEPARATOR">
             <div>
                 <h3>Contact</h3>
             </div>
-        </a>
-    </div>
-</nav>
-<div id="home"></div>
-
-<!--HOME-->
-<div id="title">
-    <hgroup>
-        <h1>David Ricardo</h1>
-        <h2>Aspiring Game Developer</h2>
-    </hgroup>
-</div>
-<div class="parallax" style="height: 318.233px;">
-    <img src="img/projects/header.png" alt="Screenshot of Kan Samurai Game" style="transform: translateY(-5.3675px); bottom: -50%; left: 0px; width: 100%; position: absolute;">
-</div>
-
-<div id="portfolio">
-    <div class="SEPARATOR">
-        <div>
-            <h3>Portfolio</h3>
         </div>
-    </div>
-    <section id="portfolioProjects"> </section>
-</div>
+        <section>
+            <div id="looking">
+                <h2>Feel free to contact me!</h2>
+            </div>
 
-<div id="otherProjects" class="smallProjects">
-    <div class="SEPARATOR">
-        <div>
-            <h3>Other Projects</h3>
-        </div>
-    </div>
-    <section id="otherProjectsSection"></section>
-</div>
+            <div id="links">
+                <a href="https://twitter.com/DavidCRicardo" target="_blank">
+                    <div>
+                        <img src="img/platforms/Twitter_Social_Icon_Circle_White.png" alt="link to David's twitter page">
+                        <img src="img/platforms/Twitter_Social_Icon_Circle_Color.png" alt="twitter highlighted icon">
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/c/DavidRicardo97" target="_blank">
+                    <div>
+                        <img src="img/platforms/youtube_social_circle_dark.png" alt="link to David's youtube page">
+                        <img src="img/platforms/youtube_social_circle_white.png" alt="youtube highlighted icon">
+                    </div>
+                </a>
+                <a href="https://github.com/DavidCRicardo" target="_blank">
+                    <div>
+                        <img src="img/platforms/GitHub-Mark-64px.png" alt="link to David's github page">
+                        <img src="img/platforms/GitHub-Mark-Light-64px.png" alt="github highlighted icon">
+                    </div>
+                </a>
+                <a href="https://david-ricardo.itch.io/" target="_blank">
+                    <div>
+                        <img src="img/platforms/itch2.png" alt="link to David's itchio page">
+                        <img src="img/platforms/itchio.png" alt="itchio highlighted icon">
+                    </div>
+                </a>
 
-<div id="resume">
-    <div class="SEPARATOR">
-        <div>
-            <h3>Resume</h3>
+            </div>
+        </section>
+        <div class="SEPARATOR">
+            <div></div>
         </div>
-    </div>
-
-    <section>
-        <aside id="bio">
-            <div id="pdf">
-            <a href="/img/portfolio/DavidRicardoCV.pdf" target="_blank" id="pdfContainer">
-                <article id="pdfBg" style="background-image:url(img/portfolio/portfolio_overview.jpg)">
-                <div class="description">
-                    <h4>PDF Resume</h4>
-                </div>
-                </article>
-            </a>
-        </div>
-        </aside>
-    </section>
-</div>
-
-<div id="contact">
-    <div class="SEPARATOR">
-        <div>
-            <h3>Contact</h3>
-        </div>
-    </div>
-    <section>
-        <div id="looking">
-            <h2>Feel free to contact me!</h2>
-        </div>
-
-        <div id="links">
-            <a href="https://twitter.com/DavidCRicardo" target="_blank">
-                <div>
-                    <img src="img/platforms/Twitter_Social_Icon_Circle_White.png" alt="link to David's twitter page">
-                    <img src="img/platforms/Twitter_Social_Icon_Circle_Color.png" alt="twitter highlighted icon">
-                </div>
-            </a>
-            <a href="https://www.youtube.com/c/DavidRicardo97" target="_blank">
-                <div>
-                    <img src="img/platforms/youtube_social_circle_dark.png" alt="link to David's youtube page">
-                    <img src="img/platforms/youtube_social_circle_white.png" alt="youtube highlighted icon">
-                </div>
-            </a>
-            <a href="https://github.com/DavidCRicardo" target="_blank">
-                <div>
-                    <img src="img/platforms/GitHub-Mark-64px.png" alt="link to David's github page">
-                    <img src="img/platforms/GitHub-Mark-Light-64px.png" alt="github highlighted icon">
-                </div>
-            </a>
-            <a href="https://david-ricardo.itch.io/" target="_blank">
-                <div>
-                    <img src="img/platforms/itch2.png" alt="link to David's itchio page">
-                    <img src="img/platforms/itchio.png" alt="itchio highlighted icon">
-                </div>
-            </a>
-
-        </div>
-    </section>
-    <div class="SEPARATOR">
-        <div></div>
     </div>
 </body>
 </html>

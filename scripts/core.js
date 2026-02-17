@@ -43,6 +43,14 @@ class PortfolioProject {
 
 var mainProjects = [
     new PortfolioProject(
+        "Speedy Runner",
+        "https://david-ricardo.itch.io/speedy-runner",
+        "img/projects/speedyRunner_thumbnail.png",
+        "img/projects/speedyRunner_thumbnail2.png",
+        `Developed using UnrealEngine.`,
+        "Personal Project"
+    ),
+    new PortfolioProject(
         "Raven Landscape",
         "https://david-ricardo.itch.io/raven-landscape",
         "img/projects/RL_thumbnail.png",
@@ -66,20 +74,18 @@ var mainProjects = [
         `Developed using C# with Visual Studio. 
 Bannerlord Mod.`,
         "Academic Project (2021)"
-    ),
-    new PortfolioProject(
-        "Two-Factor Authentication",
-        "https://github.com/DavidCRicardo/TwoFactor-Authentication",
-        "img/projects/PG1.png",
-        "img/projects/PG2.png",
-        `Developed using C# and Xamarin on Visual Studio.
-        I'm the only developer.`,
-        "Academic Project (2019)"
     )
 ],
 
 releasedProjects = [       
-    
+    new PortfolioProject(
+        "Dune: Awakening",
+        "https://duneawakening.com/",
+        "img/projects/duneAwakening.png",
+        "img/projects/duneAwakening.png",
+        `Try to Survive Arrakis`,
+        "Now shipping"
+    )
 ],
 
 otherProjects = [
@@ -109,6 +115,15 @@ otherProjects = [
         `Developed using C++ and Blueprints with Unreal Engine.
             I'm the only developer.`,
         "Personal Project (2019)"
+    ),
+    new PortfolioProject(
+        "Two-Factor Authentication",
+        "https://github.com/DavidCRicardo/TwoFactor-Authentication",
+        "img/projects/PG1.png",
+        "img/projects/PG2.png",
+        `Developed using C# and Xamarin on Visual Studio.
+            I'm the only developer.`,
+        "Academic Project (2019)"
     ),
     new PortfolioProject(
         "Launcher Prototype",
@@ -171,7 +186,7 @@ function insertMainProjects() {
 function insertReleasedProjects() {
     releasedProjects.forEach(project => {
         var portfolioSection = document.getElementById("releasedProjectsSection");
-        portfolioSection.innerHTML += project.SerializeAsMain();
+        portfolioSection.innerHTML += project.SerializeAsRelease();
     });
 }
 

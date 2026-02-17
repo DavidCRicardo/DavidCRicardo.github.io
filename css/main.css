@@ -206,6 +206,11 @@ body div section
     height: 25vh;
     max-height: 55em;
 }
+#releasedProjects section {
+	min-height: 25em;
+	height: 25vh;
+	max-height: 55em;
+}
 a .pBorder	
 {	
 	position:					relative;

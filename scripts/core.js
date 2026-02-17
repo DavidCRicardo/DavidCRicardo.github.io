@@ -81,8 +81,8 @@ releasedProjects = [
     new PortfolioProject(
         "Dune: Awakening",
         "https://duneawakening.com/",
-        "img/projects/duneAwakening.png",
-        "img/projects/duneAwakening.png",
+        "img/projects/duneAwakening.jpg",
+        "img/projects/duneAwakening.jpg",
         `Try to Survive Arrakis`,
         "Now shipping"
     )

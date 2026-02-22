@@ -1,504 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="David Ricardo — UI Programmer @ Bacalhau Games | Shipped Dune: Awakening | Unreal Engine Specialist">
-    <meta name="keywords" content="David Ricardo, UI Programmer, Bacalhau Games, Dune Awakening, Unreal Engine, Game Developer, C++, Blueprints">
-    <meta name="author" content="David Ricardo">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="David Ricardo | UI Programmer">
-    <meta property="og:description" content="Shipped Dune: Awakening at Bacalhau Games. Unreal Engine specialist.">
-    <meta property="og:image" content="https://davidcricardo.github.io/img/projects/duneAwakening.jpg">
-    <meta property="og:url" content="https://davidcricardo.github.io">
-    <meta property="og:type" content="website">
+<title>David Ricardo | Portfolio</title>
 
-    <title>David Ricardo | UI Programmer</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,500;1,900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
 
-    <script>
-        tailwind.config = {
-            content: ["./**/*.{html,js}"],
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif']
-                    },
-                    colors: {
-                        neon: '#22ff88',
-                        dune: '#d97706'
-                    }
-                }
-            }
-        }
-    </script>
+<meta name="description" content="This is David Ricardo's portfolio, here you can find personal projects where he worked.">
+<meta name="keywords" content="David, Ricardo, Portfolio, Video, Game, Developer, Programmer, 3D, C++, C#, Unreal Engine">
+<meta name="author" content="David Ricardo">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+<script src="scripts/page.min.js"></script>
 
-        .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('img/projects/duneAwakening.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .project-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-            .project-card:hover {
-                transform: translateY(-12px) scale(1.03);
-                box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
-            }
-
-        .project-img {
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .project-card:hover .project-img {
-            transform: scale(1.12);
-        }
-
-        .nav-link {
-            position: relative;
-        }
-
-            .nav-link:after {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 2px;
-                bottom: -4px;
-                left: 0;
-                background-color: #22ff88;
-                transition: width 0.3s ease;
-            }
-
-            .nav-link:hover:after {
-                width: 100%;
-            }
-
-        .filter-btn {
-            transition: all 0.3s ease;
-        }
-
-            .filter-btn.active {
-                background-color: #22ff88;
-                color: black;
-                font-weight: 600;
-            }
-    </style>
+<link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
-<body class="bg-zinc-950 text-white overflow-x-hidden">
-    <!-- NAV -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-emerald-500 rounded-full flex items-center justify-center text-xl font-bold">DR</div>
-                <span class="text-2xl font-bold tracking-tighter">David Ricardo</span>
-            </div>
 
-            <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-widest">
-                <a href="#home" class="nav-link cursor-pointer">Home</a>
-                <a href="#about" class="nav-link cursor-pointer">About</a>
-                <a href="#experience" class="nav-link cursor-pointer">Experience</a>
-                <a href="#projects" class="nav-link cursor-pointer">Projects</a>
-                <a href="#contact" class="nav-link cursor-pointer">Contact</a>
-            </div>
-
-            <a href="img/portfolio/DavidRicardoCV.pdf" target="_blank"
-               class="px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all flex items-center gap-2">
-                <span>Download CV</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
-                </svg>
+<body>
+    <!--MENU-->
+    <nav class="MENU" id="top">
+        <div class="lines"></div>
+        <button onclick="toggleMenu()" class="menuBtn">Menu</button>
+        <div id="menList" class="list">
+            <a href="#home">
+                <img class="menImg" src="img/others/DR_logo3.png" alt="home button or back to top" />
+                <div class="menTxt">
+                    <h3>Home</h3>
+                </div>
             </a>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden w-11 h-11 flex items-center justify-center">
-                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-white/10">
-            <div class="flex flex-col px-6 py-8 gap-6 text-lg">
-                <a href="#home" onclick="toggleMobileMenu()" class="hover:text-emerald-400">Home</a>
-                <a href="#about" onclick="toggleMobileMenu()" class="hover:text-emerald-400">About</a>
-                <a href="#experience" onclick="toggleMobileMenu()" class="hover:text-emerald-400">Experience</a>
-                <a href="#projects" onclick="toggleMobileMenu()" class="hover:text-emerald-400">Projects</a>
-                <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-emerald-400">Contact</a>
-            </div>
+            <a onclick="toggleMenu()" href="#portfolio">
+                <div>
+                    <h3>Portfolio</h3>
+                </div>
+            </a>
+            <a onclick="toggleMenu()" href="#resume">
+                <div>
+                    <h3>Resume</h3>
+                </div>
+            </a>
+            <a onclick="toggleMenu()" href="#contact">
+                <div>
+                    <h3>Contact</h3>
+                </div>
+            </a>
         </div>
     </nav>
+    <div id="home"></div>
 
-    <!-- HERO -->
-    <section id="home" class="hero-bg min-h-screen flex items-center relative">
-        <div class="max-w-5xl mx-auto px-6 pt-32 md:pt-40">
-            <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl mb-6">
-                    <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-                    <span class="uppercase text-sm tracking-[3px]">Now Shipping</span>
-                </div>
+    <!--HOME-->
+    <div id="title">
+        <hgroup>
+            <h1>David Ricardo</h1>
+            <h2>Aspiring Game Developer</h2>
+        </hgroup>
+    </div>
+    <div class="parallax" style="height: 318.233px;">
+        <img src="img/projects/header.png" alt="Screenshot of Kan Samurai Game" style="transform: translateY(-5.3675px); bottom: -50%; left: 0px; width: 100%; position: absolute;">
+    </div>
 
-                <h1 class="text-7xl md:text-8xl font-bold tracking-tighter leading-none mb-4">
-                    David<br>Ricardo
-                </h1>
-                <h2 class="text-3xl md:text-4xl text-emerald-400 font-medium tracking-tight">
-                    UI Programmer @ Bacalhau Games
-                </h2>
-
-                <p class="mt-8 text-xl text-zinc-300 max-w-md">
-                    Shipped <span class="text-white font-semibold">Dune: Awakening</span>.
-                    Unreal Engine specialist crafting immersive interfaces for AAA survival games.
-                </p>
-
-                <div class="flex flex-wrap gap-4 mt-12">
-                    <a href="#projects"
-                       class="px-10 py-4 bg-white text-black font-semibold rounded-2xl hover:bg-emerald-400 transition-all flex items-center gap-3 group">
-                        View Projects
-                        <span class="group-hover:translate-x-1 transition">→</span>
-                    </a>
-                    <a href="https://duneawakening.com/" target="_blank"
-                       class="px-10 py-4 border border-white/30 hover:border-white rounded-2xl transition-all">
-                        Play Dune: Awakening
-                    </a>
-                </div>
-
-                <div class="flex gap-8 mt-16 text-sm">
-                    <div>
-                        <div class="text-emerald-400 text-xs tracking-widest">CURRENT ROLE</div>
-                        <div class="font-medium">Bacalhau Games</div>
-                    </div>
-                    <div>
-                        <div class="text-emerald-400 text-xs tracking-widest">LOCATION</div>
-                        <div class="font-medium">Portugal</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs tracking-widest opacity-60">
-            <div>SCROLL</div>
-            <div class="w-px h-12 bg-gradient-to-b from-transparent via-white to-transparent"></div>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-32 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+    <div id="releasedProjects">
+        <div class="SEPARATOR">
             <div>
-                <div class="uppercase text-emerald-400 text-sm tracking-[4px] mb-6">CHAPTER 01 — ORIGIN</div>
-                <h2 class="text-6xl font-bold tracking-tighter leading-none mb-8">
-                    From solo dev<br>to AAA studios
-                </h2>
-                <div class="prose prose-invert text-zinc-300 text-lg leading-relaxed">
-                    <p>I’m a UI Programmer with a passion for creating fluid, responsive interfaces that enhance gameplay. After years of shipping personal Unreal Engine titles and mods, I joined Bacalhau Games where I contributed to <strong>Dune: Awakening</strong> — a massive open-world survival MMO.</p>
-                    <p>Specialized in Unreal Engine 5, C++, Blueprints, UMG, and modern UI/UX patterns. Always learning, always iterating.</p>
-                </div>
-                <a href="#experience" class="inline-flex items-center gap-3 mt-12 text-lg group">
-                    <span class="font-medium">My full journey</span>
-                    <span class="text-3xl group-hover:translate-x-3 transition">→</span>
-                </a>
-            </div>
-
-            <div class="relative">
-                <div class="aspect-square bg-zinc-800 rounded-3xl overflow-hidden border border-white/10">
-                    <!-- Replace with your professional photo if you have one -->
-                    <img src="img/projects/duneAwakening.jpg" alt="David Ricardo at work"
-                         class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700">
-                </div>
-                <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-emerald-400/30 rounded-2xl p-6 max-w-[220px]">
-                    <div class="flex items-center gap-4">
-                        <div class="text-5xl">🏜️</div>
-                        <div>
-                            <div class="font-mono text-emerald-400 text-sm">Arrakis</div>
-                            <div class="font-semibold">Currently surviving the desert</div>
-                        </div>
-                    </div>
-                </div>
+                <h3>Released Games</h3>
             </div>
         </div>
-    </section>
+        <section id="releasedProjectsSection"> </section>
+    </div>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="py-32 border-t border-white/5">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="uppercase text-emerald-400 text-sm tracking-[4px] mb-6">CHAPTER 02 — EXPERIENCE</div>
-            <h2 class="text-6xl font-bold tracking-tighter mb-16">Journey so far</h2>
+    <div id="portfolio">
+        <div class="SEPARATOR">
+            <div>
+                <h3>Featured Projects</h3>
+            </div>
+        </div>
+        <section id="portfolioProjects"> </section>
+    </div>
 
-            <div class="space-y-16">
-                <!-- Dune -->
-                <div class="grid md:grid-cols-12 gap-8">
-                    <div class="md:col-span-4">
-                        <div class="text-emerald-400 font-mono">2024 — Present</div>
-                        <div class="text-2xl font-semibold mt-2">UI Programmer</div>
-                        <div class="text-zinc-400">Bacalhau Games</div>
-                    </div>
-                    <div class="md:col-span-8">
-                        <div class="bg-zinc-900 border border-white/10 rounded-3xl p-10">
-                            <div class="flex items-center gap-4 mb-8">
-                                <img src="img/projects/duneAwakening.jpg" class="w-12 h-12 rounded-2xl object-cover" alt="Dune">
-                                <div>
-                                    <div class="font-semibold text-xl">Dune: Awakening</div>
-                                    <div class="text-emerald-400 text-sm">Open-World Survival MMO • Funcom + Bacalhau Games</div>
-                                </div>
+
+
+    <div id="otherProjects" class="smallProjects">
+        <div class="SEPARATOR">
+            <div>
+                <h3>Other Projects</h3>
+            </div>
+        </div>
+        <section id="otherProjectsSection"></section>
+    </div>
+
+    <div id="resume">
+        <div class="SEPARATOR">
+            <div>
+                <h3>Resume</h3>
+            </div>
+        </div>
+
+        <section>
+            <aside id="bio">
+                <div id="pdf">
+                    <a href="/img/portfolio/DavidRicardoCV.pdf" target="_blank" id="pdfContainer">
+                        <article id="pdfBg" style="background-image:url(img/portfolio/portfolio_overview.jpg)">
+                            <div class="description">
+                                <h4>PDF Resume</h4>
                             </div>
-                            <ul class="space-y-4 text-zinc-300">
-                                <li class="flex gap-3"><span class="text-emerald-400">•</span> Designed and implemented core UI systems in Unreal Engine 5</li>
-                                <li class="flex gap-3"><span class="text-emerald-400">•</span> Built responsive HUD, inventory, map, and character customization interfaces</li>
-                                <li class="flex gap-3"><span class="text-emerald-400">•</span> Optimized UI performance for large-scale multiplayer environments</li>
-                            </ul>
-                        </div>
-                    </div>
+                        </article>
+                    </a>
                 </div>
+            </aside>
+        </section>
+    </div>
 
-                <!-- Previous (summarized from your original portfolio) -->
-                <div class="grid md:grid-cols-12 gap-8 opacity-75">
-                    <div class="md:col-span-4">
-                        <div class="text-zinc-400 font-mono">2017 — 2023</div>
-                        <div class="text-2xl font-semibold mt-2">Indie &amp; Academic Developer</div>
-                    </div>
-                    <div class="md:col-span-8 text-zinc-400">
-                        Shipped 10+ personal Unreal Engine projects and mods. Specialized in C++, Blueprints, and full-cycle game development. Featured on itch.io and Nexus Mods.
-                    </div>
-                </div>
+    <div id="contact">
+        <div class="SEPARATOR">
+            <div>
+                <h3>Contact</h3>
             </div>
         </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="py-32 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="uppercase text-emerald-400 text-sm tracking-[4px]">CHAPTER 03 — TOOLKIT</div>
-                <h2 class="text-6xl font-bold tracking-tighter mt-4">What I ship with</h2>
+        <section>
+            <div id="looking">
+                <h2>Feel free to contact me!</h2>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-zinc-800/50 border border-white/5 hover:border-emerald-400/50 p-8 rounded-3xl text-center transition-all group">
-                    <div class="text-6xl mb-6">🟦</div>
-                    <div class="font-semibold text-xl">Unreal Engine 5</div>
-                    <div class="text-sm text-zinc-400 mt-1">Expert</div>
-                </div>
-                <div class="bg-zinc-800/50 border border-white/5 hover:border-emerald-400/50 p-8 rounded-3xl text-center transition-all group">
-                    <div class="text-6xl mb-6">⚡</div>
-                    <div class="font-semibold text-xl">C++ &amp; Blueprints</div>
-                    <div class="text-sm text-zinc-400 mt-1">Expert</div>
-                </div>
-                <div class="bg-zinc-800/50 border border-white/5 hover:border-emerald-400/50 p-8 rounded-3xl text-center transition-all group">
-                    <div class="text-6xl mb-6">📱</div>
-                    <div class="font-semibold text-xl">UMG / UI Systems</div>
-                    <div class="text-sm text-zinc-400 mt-1">Expert</div>
-                </div>
-                <div class="bg-zinc-800/50 border border-white/5 hover:border-emerald-400/50 p-8 rounded-3xl text-center transition-all group">
-                    <div class="text-6xl mb-6">🔧</div>
-                    <div class="font-semibold text-xl">Git • Perforce • Jira</div>
-                    <div class="text-sm text-zinc-400 mt-1">Advanced</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="py-32">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div>
-                    <div class="uppercase text-emerald-400 text-sm tracking-[4px]">CHAPTER 04 — WORK</div>
-                    <h2 class="text-6xl font-bold tracking-tighter">Featured Projects</h2>
-                </div>
-
-                <!-- Filters -->
-                <div class="flex flex-wrap gap-3 mt-8 md:mt-0" id="filters">
-                    <button onclick="filterProjects('all')" class="filter-btn active px-6 py-3 bg-white/10 hover:bg-white/20 rounded-2xl text-sm">All</button>
-                    <button onclick="filterProjects('unreal')" class="filter-btn px-6 py-3 bg-white/10 hover:bg-white/20 rounded-2xl text-sm">Unreal Engine</button>
-                    <button onclick="filterProjects('mod')" class="filter-btn px-6 py-3 bg-white/10 hover:bg-white/20 rounded-2xl text-sm">Mods</button>
-                    <button onclick="filterProjects('released')" class="filter-btn px-6 py-3 bg-white/10 hover:bg-white/20 rounded-2xl text-sm">Released</button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-32 bg-zinc-900 border-t border-white/5">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-6xl font-bold tracking-tighter mb-8">Let's build something epic</h2>
-            <p class="text-2xl text-zinc-400 mb-16">Open to new opportunities, collaborations, or just a chat about Unreal UI.</p>
-
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="https://twitter.com/DavidCRicardo" target="_blank" class="flex items-center gap-4 bg-zinc-800 hover:bg-white hover:text-black transition-all px-8 py-6 rounded-3xl group">
-                    <img src="img/platforms/Twitter_Social_Icon_Circle_Color.png" class="w-8 h-8" alt="Twitter">
-                    <div class="text-left">
-                        <div class="font-semibold">Twitter</div>
-                        <div class="text-xs text-zinc-400">@DavidCRicardo</div>
+            <div id="links">
+                <a href="https://twitter.com/DavidCRicardo" target="_blank">
+                    <div>
+                        <img src="img/platforms/Twitter_Social_Icon_Circle_White.png" alt="link to David's twitter page">
+                        <img src="img/platforms/Twitter_Social_Icon_Circle_Color.png" alt="twitter highlighted icon">
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/c/DavidRicardo97" target="_blank">
+                    <div>
+                        <img src="img/platforms/youtube_social_circle_dark.png" alt="link to David's youtube page">
+                        <img src="img/platforms/youtube_social_circle_white.png" alt="youtube highlighted icon">
+                    </div>
+                </a>
+                <a href="https://github.com/DavidCRicardo" target="_blank">
+                    <div>
+                        <img src="img/platforms/GitHub-Mark-64px.png" alt="link to David's github page">
+                        <img src="img/platforms/GitHub-Mark-Light-64px.png" alt="github highlighted icon">
+                    </div>
+                </a>
+                <a href="https://david-ricardo.itch.io/" target="_blank">
+                    <div>
+                        <img src="img/platforms/itch2.png" alt="link to David's itchio page">
+                        <img src="img/platforms/itchio.png" alt="itchio highlighted icon">
                     </div>
                 </a>
 
-                <a href="https://github.com/DavidCRicardo" target="_blank" class="flex items-center gap-4 bg-zinc-800 hover:bg-white hover:text-black transition-all px-8 py-6 rounded-3xl group">
-                    <img src="img/platforms/GitHub-Mark-Light-64px.png" class="w-8 h-8" alt="GitHub">
-                    <div class="text-left">
-                        <div class="font-semibold">GitHub</div>
-                        <div class="text-xs text-zinc-400">DavidCRicardo</div>
-                    </div>
-                </a>
-
-                <a href="https://david-ricardo.itch.io/" target="_blank" class="flex items-center gap-4 bg-zinc-800 hover:bg-white hover:text-black transition-all px-8 py-6 rounded-3xl group">
-                    <img src="img/platforms/itchio.png" class="w-8 h-8" alt="itch.io">
-                    <div class="text-left">
-                        <div class="font-semibold">itch.io</div>
-                        <div class="text-xs text-zinc-400">Play my demos</div>
-                    </div>
-                </a>
             </div>
-
-            <div class="mt-16 text-sm text-zinc-400">
-                Or email me directly at <a href="mailto:davidricardo.dev@gmail.com" class="underline hover:text-white">davidricardo.dev@gmail.com</a>
-            </div>
+        </section>
+        <div class="SEPARATOR">
+            <div></div>
         </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-12 border-t border-white/10 text-xs text-zinc-500 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-6">
-        <div>© 2026 David Ricardo. All rights reserved.</div>
-        <div class="flex gap-6 mt-6 md:mt-0">
-            <a href="https://www.linkedin.com/in/david-ricardo-53a517140" target="_blank" class="hover:text-white">LinkedIn</a>
-            <a href="https://www.youtube.com/c/DavidRicardo97" target="_blank" class="hover:text-white">YouTube</a>
-        </div>
-        <div class="mt-6 md:mt-0">Made with ❤️ for the desert</div>
-    </footer>
-
-    <script>
-        // Tailwind already initialized above
-
-        const projects = [
-            {
-                title: "Dune: Awakening",
-                desc: "UI systems for massive open-world survival MMO",
-                img: "img/projects/duneAwakening.jpg",
-                link: "https://duneawakening.com/",
-                category: "released",
-                tags: ["UE5", "UI", "AAA"]
-            },
-            {
-                title: "Speedy Runner",
-                desc: "Fast-paced endless runner built in Unreal Engine",
-                img: "img/projects/speedyRunner_thumbnail.png",
-                link: "https://david-ricardo.itch.io/speedy-runner",
-                category: "unreal",
-                tags: ["UE5", "Personal"]
-            },
-            {
-                title: "Raven Landscape",
-                desc: "Stunning open-world environment with Blueprints",
-                img: "img/projects/RL_thumbnail.png",
-                link: "https://david-ricardo.itch.io/raven-landscape",
-                category: "unreal",
-                tags: ["UE5", "Personal"]
-            },
-            {
-                title: "Inventory System C++",
-                desc: "Robust C++ inventory system for Unreal Engine",
-                img: "img/projects/IS_thumbnail.png",
-                link: "https://youtu.be/oyq-Yn8kdJI",
-                category: "unreal",
-                tags: ["C++", "UE5"]
-            },
-            {
-                title: "Friendly Lords",
-                desc: "Bannerlord mod — Diplomacy &amp; vassal system",
-                img: "img/projects/FriendlyLords.jpeg",
-                link: "https://www.nexusmods.com/mountandblade2bannerlord/mods/3230",
-                category: "mod",
-                tags: ["C#", "Mod"]
-            },
-            {
-                title: "Kan Samurai Demo",
-                desc: "Complete action-adventure demo (solo dev)",
-                img: "img/projects/devlog.png",
-                link: "https://david-ricardo.itch.io/kansamurai",
-                category: "unreal",
-                tags: ["UE5", "Solo"]
-            }
-        ]
-
-        function renderProjects(filteredProjects) {
-            const grid = document.getElementById('projects-grid')
-            grid.innerHTML = ''
-
-            filteredProjects.forEach(p => {
-                const cardHTML = `
-                    <a href="${p.link}" target="_blank" class="project-card group block bg-zinc-900 rounded-3xl overflow-hidden border border-white/10">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="${p.img}" class="project-img w-full h-full object-cover" alt="${p.title}">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 right-0 p-8">
-                                <div class="flex gap-2 mb-4">
-                                    ${p.tags.map(tag => `<span class="text-[10px] px-3 py-1 bg-white/10 rounded-full">${tag}</span>`).join('')}
-                                </div>
-                                <h3 class="text-3xl font-bold tracking-tighter">${p.title}</h3>
-                                <p class="text-zinc-400 mt-2">${p.desc}</p>
-                            </div>
-                        </div>
-                    </a>`
-                grid.innerHTML += cardHTML
-            })
-        }
-
-        function filterProjects(category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'))
-
-            const activeBtn = Array.from(document.querySelectorAll('.filter-btn')).find(btn =>
-                (category === 'all' && btn.textContent === 'All') ||
-                (category === 'unreal' && btn.textContent === 'Unreal Engine') ||
-                (category === 'mod' && btn.textContent === 'Mods') ||
-                (category === 'released' && btn.textContent === 'Released')
-            )
-            if (activeBtn) activeBtn.classList.add('active')
-
-            let filtered = projects
-            if (category !== 'all') {
-                filtered = projects.filter(p => p.category === category)
-            }
-            renderProjects(filtered)
-        }
-
-        // Mobile menu
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu')
-            menu.classList.toggle('hidden')
-        }
-
-        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu)
-
-        // Init
-        window.onload = () => {
-            renderProjects(projects)
-
-            // Smooth scroll for nav links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    if (this.getAttribute('href') !== '#') {
-                        e.preventDefault()
-                        const target = document.querySelector(this.getAttribute('href'))
-                        if (target) target.scrollIntoView({ behavior: 'smooth' })
-                    }
-                })
-            })
-        }
-    </script>
+    </div>
 </body>
 </html>

@@ -1,204 +1,220 @@
+// =============================================
+// scripts/core.js - Clean external version
+// =============================================
+
 class PortfolioProject {
-    constructor(_title, _urlref, _imgref, _imghoverref, _description, _type) {
-        this.title = _title;
-        this.urlref = _urlref;
-        this.imgref = _imgref;
-        this.imghoverref = _imghoverref;
-        this.description = _description;
-        this.type = _type;
+    constructor(title, desc, img, link, category, tags) {
+        this.title = title;
+        this.desc = desc;
+        this.img = img;
+        this.link = link;
+        this.category = category;   // can be string or array
+        this.tags = tags || [];
     }
 
-    SerializeAsMain() {
-        return "<a href='" + this.urlref + "' onclick='return clickableProject(this)' target='_blank'> \
-        <div class='pBorder'> \
-            <article style='background-image:url(" + this.imgref + ")'> \
-                <div class='description'> \
-                    <h4>" + this.title + "</h4> \
-                    <div><p>" + this.description + "</p></div> \
-                    <p class='team'>" + this.type + "</p> \
-                </div> \
-                <div style='background-image:url(" + this.imghoverref + ")' class='hov'></div> \
-            </article> \
-        </div> \
-    </a>";
-    }
-
-    SerializeAsRelease() {
-        return `<a href=` + this.urlref + `onclick="return clickableProject(this)" target="_blank">
-        <div class="pBorder">
-            <article style="background-image:url(` + this.imgref + `)">
-                <div class="description">
-                    <h4>` + this.title + `</h4>
-                    <div>
-                        <p>` + this.description + `</p>
+    render() {
+        return `
+            <a href="${this.link}" target="_blank" class="project-card group block bg-zinc-900 rounded-3xl overflow-hidden border border-white/10">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="${this.img}" class="project-img w-full h-full object-cover" alt="${this.title}">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            ${this.tags.map(tag => `<span class="text-[10px] px-3 py-1 bg-white/10 rounded-full">${tag}</span>`).join('')}
+                        </div>
+                        <h3 class="text-3xl font-bold tracking-tighter">${this.title}</h3>
+                        <p class="text-zinc-400 mt-2 line-clamp-2">${this.desc}</p>
                     </div>
-                    <p class="team">` + this.type + `</p>
                 </div>
-                <div style="background-image:url(` + this.imghoverref + `)" class="hov"></div>
-            </article>
-        </div>
-    </a>`;
+            </a>
+        `;
     }
 };
 
-var mainProjects = [
-    new PortfolioProject(
-        "Speedy Runner",
-        "https://david-ricardo.itch.io/speedy-runner",
-        "img/projects/speedyRunner_thumbnail.png",
-        "img/projects/speedyRunner_thumbnail2.png",
-        `Developed using UnrealEngine.`,
-        "Personal Project"
-    ),
-    new PortfolioProject(
-        "Raven Landscape",
-        "https://david-ricardo.itch.io/raven-landscape",
-        "img/projects/RL_thumbnail.png",
-        "img/projects/RL_thumbnail2.png",
-        `Developed using BP using UnrealEngine.`,
-        "Personal Project"
-    ),
-    new PortfolioProject(
-        "InventorySystemCPP",
-        "https://youtu.be/oyq-Yn8kdJI",
-        "img/projects/IS_thumbnail.png",
-        "img/projects/IS_thumbnail2.png",
-        `Developed using C++ using UnrealEngine.`,
-        "Personal Project"
-    ),
-    new PortfolioProject(
-        "Friendly Lords",
-        "https://www.nexusmods.com/mountandblade2bannerlord/mods/3230",
-        "img/projects/FriendlyLords.jpeg",
-        "img/projects/FriendlyLords2.jpeg",
-        `Developed using C# with Visual Studio. 
-Bannerlord Mod.`,
-        "Academic Project (2021)"
-    )
-],
+// ==================== ALL YOUR PROJECTS ====================
 
-releasedProjects = [       
-    new PortfolioProject(
-        "Dune: Awakening",
-        "https://duneawakening.com/",
-        "img/projects/duneAwakening.jpg",
-        "img/projects/duneAwakening.jpg",
-        `Try to Survive Arrakis`,
-        "Now shipping"
-    )
-],
-
-otherProjects = [
-    new PortfolioProject(
-        "Kan Samurai Demo",
-        "https://david-ricardo.itch.io/kansamurai",
-        "img/projects/devlog.png",
-        "img/projects/devlog2.png",
-        `Developed using C++ and Blueprints with Unreal Engine.
-        I'm the only developer.`,
-        "Personal Project (2021)"
-    ),
-    new PortfolioProject(
-        "Asteroids_Clone",
-        "https://david-ricardo.itch.io/asteroids-clone",
-        "img/projects/Asteroids_Clone.png",
-        "img/projects/Asteroids_Clone_2.png",
-        `Developed using C++ with Unreal Engine.
-         I'm the only developer.`,
-        "Personal Project (2019)"
-    ),
-    new PortfolioProject(
-        "TalesOfShadows",
-        "https://david-ricardo.itch.io/tales-of-shadows",
-        "img/projects/TalesOfShadows.png",
-        "img/projects/TalesOfShadows_2.png",
-        `Developed using C++ and Blueprints with Unreal Engine.
-            I'm the only developer.`,
-        "Personal Project (2019)"
-    ),
-    new PortfolioProject(
-        "Two-Factor Authentication",
-        "https://github.com/DavidCRicardo/TwoFactor-Authentication",
-        "img/projects/PG1.png",
-        "img/projects/PG2.png",
-        `Developed using C# and Xamarin on Visual Studio.
-            I'm the only developer.`,
-        "Academic Project (2019)"
-    ),
-    new PortfolioProject(
-        "Launcher Prototype",
-        "https://github.com/DavidCRicardo/Launcher_prototype",
-        "img/projects/launcher-demo1.png",
-        "img/projects/launcher-demo2.png",
-        `Developed using C# on Visual Studio.
-        I'm the only developer.`,
-        "Personal Project (2019)"
-    ),
-    new PortfolioProject(
-        "EscapeLab",
-        "https://david-ricardo.itch.io/escapelab",
-        "img/projects/escapelab_gameplay.png",
-        "img/projects/escapeLab_Menu.png",
-        `Developed using C# with Unity.
-    I'm the only developer.`,
-        "Personal Project (2017)"
-    ),
-   
-    new PortfolioProject(
-        "RPG 2D",
-        "https://youtu.be/TdcC63ItCzk",
-        "img/projects/rpg_2d_demo.png",
-        "img/projects/rpg2D_Menu2.png",
-        `Developed using HTML, CSS and Javascript.
-        I'm the only developer.`,
-        "Personal Project (2017)"
-    ),
-
-    new PortfolioProject(
-        "BreakOut",
-        "https://youtu.be/W5P5F5Ryh-8",
-        "img/projects/breakout_1.png",
-        "img/projects/BreakOut_Menu.png",
-        `Developed using C# on Visual Studio.
-        I'm the only developer.`,
-        "Academic Project (2017)"
-    ),
-
-    new PortfolioProject(
-        "PingPong",
-        "https://youtu.be/iodkJTezckY",
-        "img/projects/pingpong_1.png",
-        "img/projects/Ping_Pong_Menu.png",
-        `Developed using C# on Visual Studio.
-        I'm the only developer.`,
-        "Personal Project (2017)"
-    )
+const projects = [
+    {
+        title: "Dune: Awakening",
+        desc: "Survive the desert",
+        img: "img/projects/duneAwakening.jpg",
+        link: "https://duneawakening.com/",
+        category: ["unreal", "released"],
+        tags: ["UE5", "UI", "AAA"]
+    },
+    {
+        title: "Speedy Runner",
+        desc: "Fast-paced endless runner built in Unreal Engine",
+        img: "img/projects/speedyRunner_thumbnail.png",
+        link: "https://david-ricardo.itch.io/speedy-runner",
+        category: "unreal",
+        tags: ["UE5", "Personal"]
+    },
+    {
+        title: "Raven Landscape",
+        desc: "Stunning open-world environment with Blueprints",
+        img: "img/projects/RL_thumbnail.png",
+        link: "https://david-ricardo.itch.io/raven-landscape",
+        category: "unreal",
+        tags: ["UE5", "Personal"]
+    },
+    {
+        title: "Inventory System C++",
+        desc: "Robust C++ inventory system for Unreal Engine",
+        img: "img/projects/IS_thumbnail.png",
+        link: "https://youtu.be/oyq-Yn8kdJI",
+        category: "unreal",
+        tags: ["C++", "UE5"]
+    },
+    {
+        title: "Friendly Lords",
+        desc: "Bannerlord mod — Diplomacy & vassal system",
+        img: "img/projects/FriendlyLords.jpeg",
+        link: "https://www.nexusmods.com/mountandblade2bannerlord/mods/3230",
+        category: "mod",
+        tags: ["C#", "Mod"]
+    },
+    {
+        title: "Kan Samurai Demo",
+        desc: "Complete action-adventure demo (solo dev)",
+        img: "img/projects/devlog.png",
+        link: "https://david-ricardo.itch.io/kansamurai",
+        category: "unreal",
+        tags: ["UE5", "Solo"]
+    },
+    {
+        title: "Asteroids Clone",
+        desc: "Complete space shooter demo (solo dev)",
+        img: "img/projects/Asteroids_Clone.png",
+        link: "https://david-ricardo.itch.io/asteroids-clone",
+        category: "unreal",
+        tags: ["UE4", "2019"]
+    },
+    {
+        title: "Tales Of Shadows",
+        desc: "Complete action-adventure demo (solo dev)",
+        img: "img/projects/TalesOfShadows.png",
+        link: "https://david-ricardo.itch.io/tales-of-shadows",
+        category: "unreal",
+        tags: ["UE4", "2019"]
+    },
+    {
+        title: "Two-Factor Authentication",
+        desc: "Developed using C# and Xamarin on Visual Studio",
+        img: "img/projects/PG1.png",
+        link: "https://github.com/DavidCRicardo/TwoFactor-Authentication",
+        category: "others",
+        tags: ["Academic", "2019"]
+    },
+    {
+        title: "Launcher Prototype",
+        desc: "Developed using C# on Visual Studio",
+        img: "img/projects/launcher-demo2.png",
+        link: "https://github.com/DavidCRicardo/Launcher_prototype",
+        category: "others",
+        tags: ["Others", "2019"]
+    },
+    {
+        title: "EscapeLab",
+        desc: "Escape before the zombie finds you",
+        img: "img/projects/escapelab_gameplay.png",
+        link: "https://david-ricardo.itch.io/escapelab",
+        category: "others",
+        tags: ["Unity", "Solo", "2017"]
+    },
+    {
+        title: "RPG 2D",
+        desc: "HTML, CSS and Javascript",
+        img: "img/projects/rpg_2d_demo.png",
+        link: "https://youtu.be/TdcC63ItCzk",
+        category: "others",
+        tags: ["VisualStudio", "Solo", "2017"]
+    },
+    {
+        title: "BreakOut",
+        desc: "Destroy all the bricks",
+        img: "img/projects/BreakOut_Menu.png",
+        link: "https://youtu.be/W5P5F5Ryh-8",
+        category: "others",
+        tags: ["VisualStudio", "Solo", "2017"]
+    },
+    {
+        title: "PingPong",
+        desc: "Play with your family and friends",
+        img: "img/projects/Ping_Pong_Menu.png",
+        link: "https://youtu.be/iodkJTezckY",
+        category: "others",
+        tags: ["VisualStudio", "Solo", "2017"]
+    }
 ];
 
+// Render function
+function renderProjects(filteredProjects) {
+    const grid = document.getElementById('projects-grid');
+    grid.innerHTML = '';
 
-function insertMainProjects() {
-    mainProjects.forEach(project => {
-        var portfolioSection = document.getElementById("portfolioProjects");
-        portfolioSection.innerHTML += project.SerializeAsMain();
+    filteredProjects.forEach(p => {
+        const cardHTML = `
+            <a href="${p.link}" target="_blank" class="project-card group block bg-zinc-900 rounded-3xl overflow-hidden border border-white/10">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="${p.img}" class="project-img w-full h-full object-cover" alt="${p.title}">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            ${p.tags.map(tag => `<span class="text-[10px] px-3 py-1 bg-white/10 rounded-full">${tag}</span>`).join('')}
+                        </div>
+                        <h3 class="text-3xl font-bold tracking-tighter">${p.title}</h3>
+                        <p class="text-zinc-400 mt-2">${p.desc}</p>
+                    </div>
+                </div>
+            </a>`;
+        grid.innerHTML += cardHTML;
     });
 }
 
-function insertReleasedProjects() {
-    releasedProjects.forEach(project => {
-        var portfolioSection = document.getElementById("releasedProjectsSection");
-        portfolioSection.innerHTML += project.SerializeAsRelease();
+// Filter function
+function filterProjects(category) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+
+    const activeBtn = Array.from(document.querySelectorAll('.filter-btn')).find(btn => {
+        if (category === 'all') return btn.textContent === 'All';
+        return btn.textContent.toLowerCase() === category;
     });
+
+    if (activeBtn) activeBtn.classList.add('active');
+
+    let filtered = projects;
+
+    if (category !== 'all') {
+        filtered = projects.filter(p => {
+            if (Array.isArray(p.category)) {
+                return p.category.includes(category);
+            }
+            return p.category === category;
+        });
+    }
+
+    renderProjects(filtered);
 }
 
-function insertOtherProjects() {
-    otherProjects.forEach(project => {
-        var portfolioSection = document.getElementById("otherProjectsSection");
-        portfolioSection.innerHTML += project.SerializeAsMain();
-    });
+// Mobile menu
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
 }
 
-window.addEventListener("load", window => {
-    insertMainProjects();
-    insertReleasedProjects();
-    insertOtherProjects();
-}, false);
+// Initialize everything
+window.onload = () => {
+    renderProjects(projects);
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (this.getAttribute('href') !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+};

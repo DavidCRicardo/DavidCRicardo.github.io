@@ -1,1 +1,0 @@
-# DavidCRicardo.github.io

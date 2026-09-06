@@ -53,3 +53,25 @@
 	color: black;
 	font-weight: 600;
 }
+
+.timeline-toggle-track {
+	transition: background-color 0.3s ease;
+}
+
+.timeline-toggle-knob {
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-toggle.active .timeline-toggle-track {
+	background-color: #22ff88;
+}
+
+/* Track is 44px wide with a 20px knob inset 2px: 44 - 20 - 4 = 20px travel */
+.timeline-toggle.active .timeline-toggle-knob {
+	transform: translateX(20px);
+	background-color: black;
+}
+
+.timeline-toggle.active {
+	color: white;
+}

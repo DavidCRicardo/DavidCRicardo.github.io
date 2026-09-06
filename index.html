@@ -99,7 +99,7 @@
                 </div>-->
                 <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl mb-6">
                     <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                    <span class="uppercase text-sm tracking-[3px]">Now Shipping</span>
+                    <span class="uppercase text-sm tracking-[3px]">Currently building</span>
                 </div>
 
                 <h1 class="text-7xl md:text-8xl font-bold tracking-tighter leading-none mb-4">
@@ -111,7 +111,7 @@
 
                 <p class="mt-8 text-m text-zinc-300 max-w-md">
                     Shipped <span class="text-white font-semibold">Dune: Awakening</span>.<br />
-                    Unreal Engine game developer crafting immersive interfaces for AAA survival games.
+                    Unreal Engine game developer crafting immersive interfaces for shipped and in-progress titles.
                 </p>
 
                 <div class="flex flex-wrap gap-4 mt-12">
@@ -175,8 +175,8 @@
                     <div class="flex items-center gap-4">
                         <div class="text-5xl">🏜️</div>
                         <div>
-                            <div class="font-mono text-emerald-400 text-sm">Arrakis</div>
-                            <div class="font-semibold">Currently surviving the desert</div>
+                            <div class="font-mono text-emerald-400 text-sm">Shipped</div>
+                            <div class="font-semibold">Dune: Awakening</div>
                         </div>
                     </div>
                 </div>
@@ -188,65 +188,22 @@
         <div class="max-w-5xl mx-auto px-6">
 
             <div class="uppercase text-emerald-400 text-sm tracking-[4px] mb-6 text-center md:text-left">CHAPTER 02 — JOURNEY</div>
-            <h2 class="text-6xl font-bold tracking-tighter mb-16  text-center md:text-left">Journey so far</h2>
 
-            <!-- UI Programmer | Dune Programmer -->
+            <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-16">
+                <h2 class="text-6xl font-bold tracking-tighter text-center md:text-left">Journey so far</h2>
+                <button id="timeline-personal-toggle" type="button" role="switch" aria-checked="true"
+                        onclick="toggleTimelinePersonal()"
+                        class="timeline-toggle active group self-center md:self-auto flex items-center gap-3 text-sm text-zinc-400 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon rounded-full">
+                    <span class="timeline-toggle-track relative w-11 h-6 rounded-full bg-white/15 flex-shrink-0">
+                        <span class="timeline-toggle-knob absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-zinc-400"></span>
+                    </span>
+                    <span>Personal projects</span>
+                </button>
+            </div>
+
             <div class="relative max-w-3xl mx-auto">
-                <!-- Timeline -->
                 <div class="hidden md:block absolute left-6 top-10 bottom-10 w-px bg-gradient-to-b from-neon to-transparent"></div>
-
-                <div class="relative flex flex-col md:flex-row gap-10 mb-14 md:gap-10">
-                    <!-- Icon -->
-                    <div class="w-14 h-14 bg-zinc-900 border-2 border-neon rounded-2xl flex items-center justify-center text-3xl z-10">🏜️</div>
-                    <!-- Content -->
-                    <div class="flex-1">
-                        <div class="text-xs font-mono text-neon">2024 — PRESENT</div>
-                        <div class="text-3xl font-semibold mt-2">UI Programmer</div>
-
-                        <div class="text-zinc-400 text-sm">Funcom + Bacalhau Games</div>
-
-                        <div class="mt-4 bg-zinc-900 border border-white/10 rounded-3xl p-10">
-                            <div class="flex items-center gap-4">
-                                <img src="img/projects/duneAwakening.jpg" class="w-14 h-14 rounded-2xl object-cover">
-                                <div>
-                                    <div class="font-semibold text-2xl">Dune: Awakening</div>
-                                    <div class="text-sm text-neon">Open-World Survival MMO</div>
-                                </div>
-                            </div>
-                            <ul class="mt-8 space-y-4 text-zinc-300">
-                                <li class="flex gap-3"><span class="text-emerald-400">•</span> Designed core UI systems in UE5</li>
-                                <li class="flex gap-3"><span class="text-emerald-400">•</span> Built responsive HUD, inventory, map &amp; other interfaces</li>
-                                <li class="flex gap-3"><span class="text-emerald-400">•</span> Optimized multiplayer performance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Joined Bacalhau -->
-                <div class="relative flex gap-10 mb-14">
-                    <div class="w-14 h-14 bg-zinc-900 border-2 border-white/20 rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl z-10">🌌</div>
-                    <div class="flex-1">
-                        <div class="text-xs font-mono text-zinc-400">2023</div>
-                        <div class="text-3xl font-semibold mt-2 text-zinc-400">Joined Bacalhau Games 🐟</div>
-                        <ul class="mt-4 text-zinc-300">
-                            <li class="flex gap-3"><span>•</span> First steps in the game industry</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Indie -->
-                <div class="relative flex gap-10 mb-14">
-                    <div class="w-14 h-14 bg-zinc-900 border-2 border-white/20 rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl z-10">🌌</div>
-                    <div class="flex-1">
-                        <div class="text-xs font-mono text-zinc-400">2017 — 2023</div>
-                        <div class="text-3xl font-semibold mt-2 text-zinc-400">Indie Developer &amp; Modder</div>
-                        <ul class="mt-4 text-zinc-300">
-                            <li class="flex gap-3"><span>•</span> Developed multiple Unreal Engine and other projects</li>
-                            <li class="flex gap-3"><span>•</span> Popular Bannerlord mods on Nexus Mods</li>
-                            <li class="flex gap-3"><span>•</span> Featured on itch.io</li>
-                        </ul>
-                    </div>
-                </div>
+                <div id="timeline-entries"></div>
             </div>
         </div>
     </section>
